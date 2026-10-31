@@ -1,0 +1,13 @@
+# dsh-web-search-multi-desktop bundle patch: declares its own loader row so the
+# provider mounts whenever this package is part of a profile's bundles.
+# The searchProvider flip itself is a deployment decision and lives in the
+# PROFILE layer (override the `web` row), not here.
+#
+# The row id stays `web-search-multi`: the browser half binds its settings form
+# to this id through `configForms.get('web-search-multi')`, and the id is scoped
+# to the composition (this profile), not to the package identity. The package
+# name below is what isolates this Desktop copy from the Web profile's
+# @dsh-external/dsh-web-search-multi.
+- insert:
+    - id: web-search-multi
+      name: '@dsh-external/dsh-web-search-multi-desktop'

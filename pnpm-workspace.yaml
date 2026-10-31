@@ -1,0 +1,25 @@
+# Hoisted build-time layout: under the default isolated linker this checkout's
+# junctions are not realpath-resolved by Node's ESM loader here, so tsdown
+# cannot find its own `ansis`. Hoisting puts every build dependency at the
+# top-level node_modules as a real directory. This affects only local builds;
+# the installed plugin ships `lib/` and resolves dsh peers from the running
+# Desktop installation.
+nodeLinker: hoisted
+autoInstallPeers: false
+
+minimumReleaseAgeExclude:
+  - '@deepseek-ai/cordis@4.0.5'
+  - '@deepseek-ai/dsh-client-ui-settings@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-client-ui-slots@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-credentials@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-launch-environment@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-web@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-web-search-deepseek@0.2.1-rc.2'
+  - '@deepseek-ai/schemastery@3.18.5'
+  - '@deepseek-ai/cosmokit@1.8.6'
+  - '@deepseek-ai/dsh-brand@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-llm@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-timeout@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-typert-protocol@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-util-crypto@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-util-values@0.2.1-rc.2'
