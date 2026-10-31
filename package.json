@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-web-search-multi-desktop",
   "version": "0.2.1-desktop.1",
-  "description": "Multi-API web search provider for the DSH Desktop profile (dsh 0.2.1-rc.2): routes web_search across Tavily, Exa, and DeepSeek native search with auto failover. Version-isolated twin of @dsh-external/dsh-web-search-multi.",
+  "description": "Multi-API web search provider for the DSH Desktop profile (dsh 0.2.1-rc.2): routes web_search across Tavily, Exa, and DeepSeek native search with auto failover. The Web build (@dsh-external/dsh-web-search-multi) is retired.",
   "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
